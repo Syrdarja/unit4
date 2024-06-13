@@ -26,7 +26,7 @@ public class CardWthDelivery {
         $("[data-test-id='phone'] input").setValue("+70001122333");
         $("[data-test-id='agreement']").click();
         $$("button").find(exactText("Забронировать")).click();
-        $("[data-test-id='notification']").shouldHave(text("Встреча успешно забронирована на " + planningDate), Duration.ofSeconds(12));
-        $("[data-test-id='notification']").shouldBe(visible);
+        $("[data-test-id='notification']").shouldBe(visible,Duration.ofSeconds(15));
+        $("[data-test-id='notification']").shouldHave(text("Встреча успешно забронирована на " + planningDate));
     }
     }
